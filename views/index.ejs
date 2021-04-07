@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=H, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="m-4"> BLOGS </h1>
+        <a href="/blog/new" class="ml-4 btn btn-success">New Article</a>
+        <% blogs.forEach(element => {%>
+            <div class="card m-4">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a href='/blog/<%= element.id %>' class="text-decoration-none"><%= element.title %></a>
+                    </h4>
+                    <p class="card-subtitle text-muted m-2">
+                        <%= element.createdAt.toLocaleDateString() %>
+                    </p>
+                    <p class="card-text m-2"><%= element.description %></p>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</body>
+</html>
