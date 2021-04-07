@@ -33,22 +33,24 @@
         <!-- Background image -->
     </header>
     <div class="container">
-        <h1 class="m-4"> BLOGS </h1>
-        <a href="/blog/new" class="ml-4 btn btn-success">New Blog</a>
+        <h1 class="display-1 m-4"> BLOGS </h1>
+        <a href="/blog/new" class="text-decoration-none">
+            <h5 class="display-6 ml-4">+ Add New Blog</h5>
+        </a>
         <% blogs.forEach(element=> {%>
             <div class="card m-4">
                 <div class="card-body">
                     <h4 class="card-title">
-                        <a href='/blog/<%= element.id %>' class="text-decoration-none">
+                        <a href='/blog/<%= element.id %>' class="display-6 text-decoration-none">
                             <%= element.title %>
                         </a>
                     </h4>
                     <p class="card-subtitle text-muted m-2">
                         <%= element.createdAt.toLocaleDateString() %>
                     </p>
-                    <p class="card-text m-2">
+                    <h5 class="card-text font-italic m-2">
                         <%= element.description %>
-                    </p>
+                    </h5>
                 </div>
             </div>
             <% }); %>
