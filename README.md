@@ -1,3 +1,4 @@
-# Node_Assignment
+Created 'Blog Post App' using MEN stack MongoDB, Express and NodeJS<br>
 
-![alt text](https://github.com/vatssue23/Node_Assignment/image.png)
+<b>Web app workflow</b>
+1- 
