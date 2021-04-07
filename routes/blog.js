@@ -10,7 +10,7 @@ router.get('/:id', async(req, res) => {
     let blog = await blogs.findById(req.params.id);
     if (blog == null) res.redirect('/');
     console.log(blog);
-    res.render('show.ejs', { blog: blog});
+    res.render('view_blog.ejs', { blog: blog});
 })
 
 router.post('/', async(req, res) => {
